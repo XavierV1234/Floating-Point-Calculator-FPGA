@@ -4,14 +4,14 @@ module LCD_Board_Test_LCD
 	  
 	  input                clk      , // 50MHz Clock
 	  input                lcd_reset    , // LCD Reset
-	  input    [0:11] 	  LCD_Board_PB , // LCD Board Push Buttons
-          input    [0:4] 		  LCD_Board_SW , // LCD Board Switches
+	  input    [0:11] 	LCD_Board_PB , // LCD Board Push Buttons
+          input    [0:4] 	LCD_Board_SW , // LCD Board Switches
 	  inout    [7:0]       lcd_data     , // LCD Data Bus
 	  input                LoadA, LoadB, LoadC, trig,
-	  input regreset,
-          output   [0:7] 		  LCD_Board_LED, // LCD Board LEDs
-	  output[3:0] col,
-          output   [0:9] 		  DE10_LED		, // DE10_Lite Red LEDs
+	  input                 regreset,
+          output   [0:7] 	LCD_Board_LED, // LCD Board LEDs
+          output   [3:0]    col,
+          output   [0:9] 	DE10_LED		, // DE10_Lite Red LEDs
 	  output               lcd_rs       , // LCD Register Select
 	  output               lcd_rw       , // LCD Read Write Select
 	  output               lcd_e         // LCD Execute

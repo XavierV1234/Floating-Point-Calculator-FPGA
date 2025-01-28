@@ -1,19 +1,17 @@
 module LCD_Board_Test_LCD
 	 (
 	  input [3:0] row,
-//	  input [15:0]FloatA,
-//	  input [15:0]FloatB,
 	  
 	  input                clk      , // 50MHz Clock
 	  input                lcd_reset    , // LCD Reset
 	  input    [0:11] 	  LCD_Board_PB , // LCD Board Push Buttons
-     input    [0:4] 		  LCD_Board_SW , // LCD Board Switches
+          input    [0:4] 		  LCD_Board_SW , // LCD Board Switches
 	  inout    [7:0]       lcd_data     , // LCD Data Bus
 	  input                LoadA, LoadB, LoadC, trig,
 	  input regreset,
-     output   [0:7] 		  LCD_Board_LED, // LCD Board LEDs
+          output   [0:7] 		  LCD_Board_LED, // LCD Board LEDs
 	  output[3:0] col,
-     output   [0:9] 		  DE10_LED		, // DE10_Lite Red LEDs
+          output   [0:9] 		  DE10_LED		, // DE10_Lite Red LEDs
 	  output               lcd_rs       , // LCD Register Select
 	  output               lcd_rw       , // LCD Read Write Select
 	  output               lcd_e         // LCD Execute
@@ -21,20 +19,10 @@ module LCD_Board_Test_LCD
 
 	  );  
 	  
-//	 assign DE10_LED[0:9]      = LCD_Board_PB[0:9];
-//    assign LCD_Board_LED[0]   = LCD_Board_SW[0];
-//    assign LCD_Board_LED[1]   = LCD_Board_SW[1];
-//    assign LCD_Board_LED[2]   = LCD_Board_SW[2];
-//    assign LCD_Board_LED[3]   = LCD_Board_SW[3];
-//    assign LCD_Board_LED[4]   = LCD_Board_SW[4];
-//	 assign LCD_Board_LED[5]   = LCD_Board_PB[10];
-//	 assign LCD_Board_LED[6]   = LCD_Board_PB[11];  
-//	 assign LCD_Board_LED[7]   = LCD_Board_PB[11];  
+
 	  
 
 	 logic [19:0] A;
-//	 logic [15:0] B;
-//	 logic [15:0] C;
 	 logic [3:0] value;
 	 logic [15:0] binarySM;
 	 logic [15:0] regA, regB, regC;
@@ -45,7 +33,7 @@ module LCD_Board_Test_LCD
 
 
 
-inputMod inputMod_inst
+inputMod inputMod1
 (
 	.clk(clk) ,	// input  clk_sig
 	.reset(regreset) ,	// input  reset_sig
